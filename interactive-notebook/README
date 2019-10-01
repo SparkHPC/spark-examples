@@ -44,4 +44,4 @@ with pyspark.
 
 Note: if somebody is using the same port number as you are trying to connect,
 your connction will fail.  In this case change the port number (8008 as in the above)
-and try again.
+and try again, avoiding the port numbers Spark uses (4040, 8080, and etc.).

@@ -15,6 +15,13 @@ SYNOPSIS
 	 jupyter notebooks.
 
 DESCRIPTION
+     This directory contains example files for interactive and
+     non-interactive jobs using Apache Spark with pyspark on
+     the ALCF Theta system.
+
+     Please copy the directory to your own project directory and
+     follow the insturctions in the README files under the
+     subdirectories.
 
 SEE ALSO
      https://www.alcf.anl.gov/user-guides/apache-spark
@@ -29,4 +36,5 @@ LICENSE
      MIT license, see file LICENSE.
 
 BUGS
-     
+     How Apache Spark partitions the RDD by default may vary from
+     version to version.
