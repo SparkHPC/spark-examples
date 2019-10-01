@@ -1,0 +1,47 @@
+The following contains the minimal steps to start a Jupyter notebook
+with pyspark.
+
+1. On a Theta login node, execute,
+
+	/soft/datascience/Spark_Job/submit-spark.sh \
+		-A SDL_Workshop -t 60 -n 2 -q training -I
+
+   Wait and the screen will print something similar to,
+
+	...
+	SPARKJOB_JOBID=325700
+	...
+	# Spark is now running (SPARKJOB_JOBID=325700) on:
+	# nid03835      nid03836
+	declare -x SPARK_MASTER_URI="spark://nid03835:7077"
+	# Spawning bash on host: nid03835
+	...
+
+   The node id number will change in your case.  It will eventually
+   drop you in to a Bash shell on one of the compute node, where
+   the master process of Apache Spark has already started.
+
+2. In the spawned bash shell, in this case on nid03835, execute
+
+	export PYSPARK_DRIVER_PYTHON=jupyter
+	export PYSPARK_DRIVER_PYTHON_OPTS="notebook --no-browser --ip=nid03835 --port=8008"
+	/soft/datascience/apache_spark/bin/pyspark \
+		--master $SPARK_MASTER_URI
+
+   Here we set and export a few environment variables and start pyspark.
+   Note that other Spark related variables is already in the environment.
+
+3. On your local machine, we ssh tunnel via the login and mom nodes
+   to the compute node, execute the following,
+
+	ssh -L 8008:localhost:8008 theta ssh -L 8008:nid03835:8008 thetamom1
+
+4. The Jupyter notebook can be reached on your local machine at,
+
+	http://localhost:8008
+
+--
+
+Note: if somebody is using the same port number as you are trying to connect,
+your connction will fail.  In this case change the port number (8008 as in the above)
+and try again.

@@ -1,0 +1,11 @@
+The following contains the minimal steps to start a script job
+with pyspark running the script file in this directory, 
+
+	Julia_set_reverse_iteration_Spark.py
+
+1. On a Theta login node, under this directory, execute the following
+
+	./submit_the_job
+
+2. Wait untill the job is run (check qstat), and see the output files
+   under this directory.

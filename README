@@ -1,0 +1,32 @@
+NAME
+     Getting Started with Spark on Theta
+
+SYNOPSIS
+     noninteractive/
+     noninteractive/Julia_set_reverse_iteration_Spark.py
+     noninteractive/README
+         Example and instructions for noninteractive jobs with
+	 Apach Spark.
+
+     interactive-notebook/
+     interactive-notebook/Julia_set_reverse_iteration_Spark.ipynb
+     interactive-notebook/README
+         Example and instructions for running Apache Spark in
+	 jupyter notebooks.
+
+DESCRIPTION
+
+SEE ALSO
+     https://www.alcf.anl.gov/user-guides/apache-spark
+     /soft/datascience/Spark_Job/readme
+     /soft/datascience/Spark_Job/example/readme
+
+AUTHORS
+     Xiao-Yong Jin <xjin@anl.gov>
+
+LICENSE
+     Copyright (c) 2019 Argonne National Laboratory
+     MIT license, see file LICENSE.
+
+BUGS
+     

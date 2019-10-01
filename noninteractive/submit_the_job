@@ -1,0 +1,4 @@
+#!/bin/sh
+/soft/datascience/Spark_Job/submit-spark.sh \
+	-A SDL_Workshop -t 60 -n 2 -q training \
+	./Julia_set_reverse_iteration_Spark.py
